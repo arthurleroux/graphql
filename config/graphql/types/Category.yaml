@@ -1,9 +1,10 @@
 Category:
   type: object
   config:
-    id:
-      type: 'Int!'
-    name:
-      type: 'String!'
-    products:
-      type: '[Product]'
+    fields:
+      id:
+        type: 'Int!'
+      name:
+        type: 'String!'
+      products:
+        type: '[Product]'

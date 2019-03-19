@@ -1,8 +1,24 @@
-Query:
+Query :
   type: object
   config:
     fields:
       Product:
         type: 'Product'
+        args:
+          id:
+            description: "Resolve products using its id"
+            type: 'Int!'
+        resolve: "@=resolver('Product', [args['id']])"
+      Products:
+        type: '[Product]'
+        resolve: "@=resolver('Products')"
       Category:
         type: 'Category'
+        args:
+          id:
+            description: 'Resolve Category using its id'
+            type: 'Int!'
+        resolve: "@resolver('Category', [args['id']])"
+      Categories:
+        type: '[Category]'
+        resolve: "@=resolver('Categories')"
